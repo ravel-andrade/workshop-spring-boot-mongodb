@@ -16,7 +16,7 @@ public class UserService {
 
 	@Autowired
 	private UserRepository repo;
-
+	
 	public List<User> findAll() {
 		return repo.findAll();
 	}
@@ -28,6 +28,12 @@ public class UserService {
 	
 	public User Insert(User obj) {
 		return repo.insert(obj);
+		
+	}
+	
+	public void Delete(String id) {
+		findById(id);
+		repo.deleteById(id);
 		
 	}
 	
