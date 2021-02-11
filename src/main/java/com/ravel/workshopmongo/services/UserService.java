@@ -6,6 +6,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.ravel.workshopmongo.domain.Post;
 import com.ravel.workshopmongo.domain.User;
 import com.ravel.workshopmongo.dto.UserDTO;
 import com.ravel.workshopmongo.repository.UserRepository;
@@ -51,4 +52,5 @@ public class UserService {
 	public User fromDTO(UserDTO objDto) {
 		return new User(objDto.getId(),objDto.getName(),objDto.getEmail());
 	}
+	
 }

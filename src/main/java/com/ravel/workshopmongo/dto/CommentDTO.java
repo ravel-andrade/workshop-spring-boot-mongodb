@@ -3,6 +3,9 @@ package com.ravel.workshopmongo.dto;
 import java.io.Serializable;
 import java.util.Date;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class CommentDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
